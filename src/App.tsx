@@ -1,9 +1,7 @@
 import './App.css';
 import translations from './translations.json';
-
-export const TEST_IDS = {
-  list: 'list-component',
-};
+import MonumentsList from './components/MonumentsList';
+import TEST_IDS from './testIds/app.json';
 
 function App() {
   return (
@@ -11,6 +9,7 @@ function App() {
       <h1 className="App-header">
         {translations.app.header}
       </h1>
+      <MonumentsList testId={TEST_IDS.list} />
     </div>
   );
 }

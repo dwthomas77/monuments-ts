@@ -1,18 +1,17 @@
 import translations from '../../src/translations.json';
-import {TEST_IDS} from '../../src/App';
+import APP_TEST_IDS from '../../src/testIds/app.json';
 
 describe('app loads correctly', () => {
   it('loads!', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('/');
   });
   it('displays the correct header', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('/');
     cy.get('h1')
       .should('have.text', translations.app.header);
   });
   it('displays the Monument List component', () => {
-    cy.visit('http://localhost:3000/');
-    console.log(TEST_IDS)
-    cy.get('[data-test-id="list-component"]').should('exist');
+    cy.visit('/');
+    cy.get('[data-test-id="'+APP_TEST_IDS.list+'"]').should('exist');
   });
 });
