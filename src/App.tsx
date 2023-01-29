@@ -1,6 +1,10 @@
 import './App.css';
 import translations from './translations.json';
 
+export const TEST_IDS = {
+  list: 'list-component',
+};
+
 function App() {
   return (
     <div className="App">

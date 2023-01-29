@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.16.1",
     "cypress": "^12.4.1"
   }
 }
