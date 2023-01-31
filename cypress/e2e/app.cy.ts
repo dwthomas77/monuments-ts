@@ -1,5 +1,5 @@
 import translations from '../../src/translations.json';
-import APP_TEST_IDS from '../../src/testIds/app.json';
+import APP_TEST_IDS from '../../src/testIds/App.json';
 
 describe('app loads correctly', () => {
   it('loads!', () => {
@@ -12,6 +12,6 @@ describe('app loads correctly', () => {
   });
   it('displays the Monument List component', () => {
     cy.visit('/');
-    cy.get('[data-test-id="'+APP_TEST_IDS.list+'"]').should('exist');
+    cy.get('[data-test="'+APP_TEST_IDS.LIST+'"]').should('exist');
   });
 });

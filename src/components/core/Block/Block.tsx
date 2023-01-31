@@ -7,9 +7,9 @@ type BlockProps = {
 const Block = ({children, testId, type}: BlockProps) => {
   switch(type) {
     case 'header':
-      return <header data-test-id={testId}>{children}</header>;
+      return <header data-test={testId}>{children}</header>;
     default:
-      return <div data-test-id={testId}>{children}</div>;
+      return <div data-test={testId}>{children}</div>;
   }  
 };
 

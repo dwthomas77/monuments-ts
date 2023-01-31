@@ -1,3 +1,3 @@
-const convertTestIdToAttr = (testId: string) => `[data-test-id="${testId}"]`;
+const convertTestIdToAttr = (testId: string) => `[data-test="${testId}"]`;
 
 export {convertTestIdToAttr};

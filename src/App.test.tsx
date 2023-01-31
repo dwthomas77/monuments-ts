@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import translations from './translations.json';
-import APP_TEST_IDS from './testIds/app.json';
+import APP_TEST_IDS from './testIds/App.json';
 
 it('renders the correct header', () => {
   render(<App />);
@@ -11,6 +11,6 @@ it('renders the correct header', () => {
 
 it('renders the MonumentList component', () => {
   const {container} = render(<App />);
-  const listElement = container.querySelector(`[data-test-id="${APP_TEST_IDS.list}"]`);
+  const listElement = container.querySelector(`[data-test="${APP_TEST_IDS.LIST}"]`);
   expect(listElement).toBeInTheDocument();
 })
