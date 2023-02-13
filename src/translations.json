@@ -2,6 +2,9 @@
   "app": {
     "header": "MONUMENTS TYPESCRIPT"
   },
+  "error": {
+    "reducer_unknown_action": "Unknown Action Dispatched to Reducer"
+  },
   "monumentsList": {
     "header": "MONUMENTS"
   }

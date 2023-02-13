@@ -7,7 +7,7 @@ import translations from '../../translations.json';
 describe('<MonumentsList />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
-    mount(<MonumentsList testId='testId' />);
+    mount(<MonumentsList testId='testId' list={[]} />);
     cy.get(convertTestIdToAttr(TEST_IDS.HEADER)).should('have.text', translations.monumentsList.header);
   });
 });

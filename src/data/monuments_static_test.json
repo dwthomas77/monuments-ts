@@ -1,0 +1,27 @@
+[
+  {
+    "uid": "a1",
+    "city": "Boston",
+    "state": "MA"
+  },
+  {
+    "uid": "a2",
+    "city": "Methuen",
+    "state": "MA"
+  },
+  {
+    "uid": "a3",
+    "city": "Haverhill",
+    "state": "MA"
+  },
+  {
+    "uid": "a4",
+    "city": "Ellsworth",
+    "state": "ME"
+  },
+  {
+    "uid": "a5",
+    "city": "Londonderry",
+    "state": "NH"
+  }
+]

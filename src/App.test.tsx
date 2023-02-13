@@ -10,7 +10,7 @@ it('renders the correct header', () => {
 });
 
 it('renders the MonumentList component', () => {
-  const {container} = render(<App />);
-  const listElement = container.querySelector(`[data-test="${APP_TEST_IDS.LIST}"]`);
+  const {getByTestId} = render(<App />);
+  const listElement = getByTestId(APP_TEST_IDS.LIST);
   expect(listElement).toBeInTheDocument();
 })
