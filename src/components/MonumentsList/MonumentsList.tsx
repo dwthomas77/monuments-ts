@@ -3,14 +3,16 @@ import translations from '../../translations.json';
 import TEST_IDS from '../../testIds/MonumentsList.json';
 import List from '../core/List';
 import { MonumentType } from '../../services/monuments';
+import designTokens from '../../designSystem';
 
 type MonumentListProps = {
   list: MonumentType[],
+  onItemClick: Function,
   testId: string,
 };
 
-const MonumentsListItem = (monument: MonumentType) => {
-  return <Block key={`monument-list-item-${monument.uid}`}>{`${monument.city}, ${monument.state}`}</Block>;
+const MonumentsListItem = (monument: MonumentType, onItemClick: Function) => {
+  return <Block key={`monument-list-item-${monument.uid}`} onClick={() => {onItemClick(monument.uid)}}>{`${monument.city}, ${monument.state}`}</Block>;
 }
 
 const MonumentsList = ({list, testId}: MonumentListProps) => {
@@ -20,7 +22,7 @@ const MonumentsList = ({list, testId}: MonumentListProps) => {
     (<div>Sorry No Results</div>);
   return (
     <Block testId={testId}>
-      <Block type='header' testId={TEST_IDS.HEADER}>{translations.monumentsList.header}</Block>
+      <Block type='header' style={designTokens.listHeader} testId={TEST_IDS.HEADER}>{translations.monumentsList.header}</Block>
       {results}
     </Block>
   );

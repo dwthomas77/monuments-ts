@@ -7,9 +7,17 @@ type ListPropTypes = {
 };
 
 const List = ({ ListItemComponent, listItems, testId }: ListPropTypes) => {
+  const hoverTextClass = 'hoverText';
+  const activeTextClass = 'activeText';
+
   return (
     <Block type='ul' testId={testId}>
-      {listItems.map((item, index: number) => <ListItemComponent key={`${testId}-item-${index}`} {...item} />)}
+      {listItems.map(
+        (item, index: number) => (
+          <Block type='li' key={`${testId}-item-${index}`} className={hoverTextClass}>
+            <ListItemComponent {...item} />
+          </Block>
+      ))}
     </Block>
   );
 };

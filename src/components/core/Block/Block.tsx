@@ -1,22 +1,37 @@
 type BlockProps = {
   children?: any,
+  className?: string,
+  onClick?:  React.MouseEventHandler<HTMLElement> | undefined,
   style?: object,
   testId?: string,
   type?: string, 
 }
 
-const Block = ({children, style, testId = '', type}: BlockProps) => {
+type BlockElementProps = {
+  className?: string,
+  'data-test-id'?: string,
+  onClick?: React.MouseEventHandler<HTMLElement> | undefined,
+  style?: object,
+  testId?: string,
+};
+
+const Block = ({className='', children, onClick = undefined, style, testId = '', type}: BlockProps) => {
+  console.log(onClick)
+  const blockElementProps: BlockElementProps = { 'data-test-id': testId, style, className};
+  if (onClick) {
+    blockElementProps.onClick = onClick;
+  }
   switch(type) {
     case 'header':
-      return <header data-testid={testId} style={style}>{children}</header>;
+      return <header {...blockElementProps}>{children}</header>;
     case 'h1':
-      return <h1 data-testid={testId} style={style}>{children}</h1>;
+      return <h1 data-testid={testId} style={style} className={className} onClick={onClick}>{children}</h1>;
     case 'ul':
-      return <ul data-testid={testId} style={style}>{children}</ul>;
+      return <ul data-testid={testId} style={style} className={className} onClick={onClick}>{children}</ul>;
     case 'li':
-        return <ul data-testid={testId} style={style}>{children}</ul>;
+        return <li data-testid={testId} style={style} className={className} onClick={onClick}>{children}</li>;
     default:
-      return <div data-testid={testId} style={style}>{children}</div>;
+      return <div data-testid={testId} style={style} className={className} onClick={onClick}>{children}</div>;
   }  
 };
 

@@ -4,7 +4,7 @@ const mockApiRequest = ({payload, shouldReject = false}: {payload: any, shouldRe
     if(!shouldReject) {
       setTimeout(() => {
         resolve(payload);
-      }, 100);
+      }, 1000);
     } else {
       reject(new Error('mockAPI call failed'));
     }

@@ -6,8 +6,9 @@ import translations from '../../translations.json';
 
 describe('<MonumentsList />', () => {
   it('renders', () => {
+    const itemClickTestFunction = (uid: string) => {console.log(uid)};
     // see: https://on.cypress.io/mounting-react
-    mount(<MonumentsList testId='testId' list={[]} />);
+    mount(<MonumentsList testId='testId' list={[]} onItemClick={itemClickTestFunction} />);
     cy.get(convertTestIdToAttr(TEST_IDS.HEADER)).should('have.text', translations.monumentsList.header);
   });
 });
