@@ -1,6 +1,6 @@
 import Block from '../core/Block';
 import translations from '../../translations.json';
-import TEST_IDS from '../../testIds/MonumentsList.json';
+import TEST_IDS from '../../testIds/monumentsList.json';
 import List from '../core/List';
 import { MonumentType } from '../../services/monuments';
 import designTokens from '../../designSystem';

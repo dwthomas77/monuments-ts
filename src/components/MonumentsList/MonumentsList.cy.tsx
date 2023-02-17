@@ -1,6 +1,6 @@
 import { mount } from 'cypress/react18';
 import MonumentsList from './MonumentsList';
-import TEST_IDS from '../../testIds/MonumentsList.json';
+import TEST_IDS from '../../testIds/monumentsList.json';
 import { convertTestIdToAttr } from '../../utils';
 import translations from '../../translations.json';
 

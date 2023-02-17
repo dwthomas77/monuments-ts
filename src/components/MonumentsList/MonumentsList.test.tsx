@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import MonumentsList from './MonumentsList';
-import TEST_IDS from '../../testIds/MonumentsList.json';
+import TEST_IDS from '../../testIds/monumentsList.json';
 import translations from '../../translations.json';
 import { convertTestIdToAttr } from '../../utils';
 import { MonumentType } from '../../services/monuments';

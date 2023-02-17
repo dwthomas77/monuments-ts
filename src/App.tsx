@@ -3,7 +3,7 @@ import translations from './translations.json';
 import Header from './components/core/Header';
 import Layout, {DIRECTION_VERTICAL} from './components/core/Layout';
 import MonumentsList from './components/MonumentsList';
-import TEST_IDS from './testIds/App.json';
+import TEST_IDS from './testIds/app.json';
 import { UPDATE_ACTIVE_MONUMENT, UPDATE_MONUMENT_LIST } from './actions';
 import { MonumentType } from './services/monuments';
 import fetchMonuments from './services/monuments';

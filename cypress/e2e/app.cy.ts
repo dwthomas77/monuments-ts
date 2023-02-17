@@ -1,5 +1,5 @@
 import translations from '../../src/translations.json';
-import APP_TEST_IDS from '../../src/testIds/App.json';
+import APP_TEST_IDS from '../../src/testIds/app.json';
 
 describe('app loads correctly', () => {
   it('loads!', () => {
